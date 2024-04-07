@@ -1,0 +1,161 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="E_COMMERCE_SITE.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>HOME PAGE</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@700&family=Lumanosimo&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/StyleSheet2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@700&family=Lumanosimo&family=Merriweather:wght@300&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@700&family=IBM+Plex+Mono:wght@700&family=Lumanosimo&family=Merriweather:wght@300&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@700&family=IBM+Plex+Mono:wght@700&family=Lumanosimo&family=Merriweather:wght@300&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    
+    <script>
+
+
+        function logout() {
+            sessionStorage.setItem("email", "");
+        }
+        
+        
+    </script>
+</head>
+<body>
+    <style>
+        .homelink {
+            font-style: font-family: 'Merriweather', serif;
+            color: white;
+            padding:10px;
+            border-radius:25px;
+        }
+
+        .homelink:hover {
+            box-shadow:0px 0px 25px 10px #ff6a00;
+        }
+        .bottom-text {
+            color:white;
+        }
+        .top_links {
+            margin:0px 30px 0px 30px;
+        }
+        
+    </style>
+    <header style="border-top-left-radius: 25px; border-top-right-radius: 25px; background-color: #11113b; padding-top: 10px; padding-bottom: 10px; display: flex; flex-wrap: wrap" runat="server">
+        <div style="display: inline; width: 50%">
+            <nav style="display: flex; flex-wrap: wrap; column-gap: 100px; margin-left: 50px;">
+                <image style="height: 50px; width: 50px" src="https://img.freepik.com/free-vector/supermarket-logo-concept_23-2148467758.jpg?w=740&t=st=1692283831~exp=1692284431~hmac=b9f08f7ca06903c9f17cb5f4efa9c819b66738efbb979eefc19319654fa4a97d"></image>
+                <span style="color: #ffffff; font-size: 25px; font-family: 'Edu SA Beginner', cursive; font-family: 'IBM Plex Mono', monospace; font-family: 'Lumanosimo', cursive; font-family: 'Merriweather', serif; font-family: 'Roboto Mono', monospace;"><b onclick="main_page()">SwiftBuy.in</b></span>
+
+                <div style="padding-top: 10px;">
+                        <a href="WebForm1.aspx" style="text-decoration: none;" class="homelink"><b>Home</b></a>
+                        <a href="admin_panel.aspx" style="margin-left: 30px; text-decoration: none" class="homelink"><b>Admin</b></a>
+                    </div>
+                </nav>
+            </div>
+            <div style="width:50%;">
+                <nav style="display: flex; flex-wrap: wrap; column-gap: 100px; margin-left: 200px;justify-content:end;margin-right:50px;">
+                    <div style="padding-top: 10px;">
+                        
+                        <a href="log_in.aspx" id="dis1" style="text-decoration: none" runat="server" class="homelink">Log in</a>
+                        
+                        <a href="register.aspx"  id="dis2" style="text-decoration: none;margin-left:30px" runat="server" class="homelink">Register</a>                        
+                    </div>
+                </nav>
+            </div>
+            <br />
+            
+        </header>
+        
+    <div>
+        <form runat="server" >
+            <div style="display:flex; justify-content:end; padding-bottom: 14px; background-color: #11113b; text-align: end; border-bottom-left-radius: 25px; border-bottom-right-radius: 25px">
+                <div>
+                    <asp:Button Text="MOBILE AND COMPUTER" runat="server"  OnClick="Unnamed_Click1" BackColor="#11113b" ForeColor="White" ID="mc" CssClass="top_links"/>
+                    <asp:Button Text="TV APPLIANCES ELECTRONICS" runat="server"  OnClick="Unnamed_Click1" BackColor="#11113b" ForeColor="White" ID="tae" CssClass="top_links"/>
+                    <asp:Button Text="FASHION DEALS" runat="server"  OnClick="Unnamed_Click1" BackColor="#11113b" ForeColor="White" ID="fd" CssClass="top_links"/>
+                </div>
+                <div style="padding-right: 30px; padding-bottom: 30px">
+                    <asp:Label runat="server" ID="name_div" Text="Howdy" CssClass="homelink"></asp:Label>
+                </div>
+                <div style="display: flex; margin-right: 50px;">
+                    <asp:Button runat="server" OnClick="logout" Text="Log Out" ID="out" Height="30px" Width="90px" class="homelink" ForeColor="#000066" />
+                    <div style="display: flex; margin-left: 30px">
+                        <div style="display:inline;margin-right:50px;">
+                            <asp:ImageButton src="\images\shopping-cart.png" height="30px" width="30px" OnClick="Unnamed_Click" runat="server"/>
+                             <span runat="server" id="number" style="color:white;font-size:20px;position:absolute"></span>
+                        </div>
+                       
+                        <asp:TextBox ID="search_item" placeholder="SEARCH ITEM" runat="server" Height="25px"></asp:TextBox>
+                    </div>
+                    <asp:ImageButton runat="server" ImageUrl="https://www.citypng.com/public/uploads/preview/download-blue-search-icon-button-png-11640084027s0fkuhz2lb.png?v=2023070523" Height="30px" Width="30px" OnClick="get_key_word" />
+                </div>
+            </div>
+                
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </form>
+
+        </div>
+        
+   
+    <div style="display: flex; justify-content: center" id="dynamic" runat="server">
+        Dynamic Offer Deal
+    </div>
+    <div style="display:flex;justify-content:center;margin-top:900px;" ID="mdiv" runat="server">
+        <image id="imgg" height="400px" width="1000px" src="/images/4.jpg"></image>
+    </div>
+    
+    <div class="bottom_section" style="background-color:#11113b;margin-left:30px;margin-right:30px;
+        position:relative; border-radius:25px;display:flex;justify-content:center;flex-wrap:wrap;height:300px;margin-top:100px;column-gap:50px;">
+        <div>
+            <p class="bottom-text" style="font-weight:bold">Get to Know Us</p>
+            <br />
+            <p class="bottom-text">About Us</p>
+            <br />
+            <p class="bottom-text">Careers</p>
+            <br />
+            <p class="bottom-text">Press Release</p>
+            <br />
+            <p class="bottom-text">Amazon Science</p>
+        </div>  
+        <div>
+            <p class="bottom-text" style="font-weight:bold">Connect With Us</p>
+            <br />
+            <p class="bottom-text">Facebook</p>
+            <br />
+            <p class="bottom-text">Instagram</p>
+            <br />
+            <p class="bottom-text">Twitter</p>
+        </div>
+        <div>
+           <p class="bottom-text" style="font-weight:bold">Let US Help You</p>
+           <br />
+           <p class="bottom-text">100% pay back gurantee</p>
+           <br />
+            <p class="bottom-text">SwiftBuy app download</p>
+        </div>
+    </div>
+    <script>
+        function main_page() {
+            document.location.replace("WebForm1.aspx");
+        }
+    </script>
+</body>
+</html>
