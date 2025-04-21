@@ -1,3 +1,28 @@
+SwiftBuy 🛒
+SwiftBuy is a feature-rich e-commerce web application developed using ASP.NET Web Forms (v4.8), C#, and SQL Server. It includes essential functionalities such as product browsing, secure purchasing, admin panel for product management, and an authentication system. Designed with responsiveness and performance in mind, SwiftBuy delivers a seamless shopping experience.
+
+🔧 Built With:
+ASP.NET Web Forms (4.8)
+
+SQL Server
+
+C#
+
+HTML, CSS, JavaScript
+
+AJAX
+
+🌟 Features:
+Product listing and detailed views
+
+Secure user authentication and registration
+
+Shopping cart and checkout process
+
+Admin panel for product management
+
+Real-time interaction using AJAX
+
 Home Page
 ![Screenshot 2023-09-30 224840](https://github.com/gargasaha/EcommerceSite/assets/92121621/4dc70421-0f40-468e-a7f1-e8a5e98dd784)
 ![Screenshot 2023-09-30 224921](https://github.com/gargasaha/EcommerceSite/assets/92121621/df6f4acf-e89b-4fd8-883b-94e864830001)
